@@ -1,8 +1,9 @@
 import getUserId from '../utils/getUserId'
 
+
 const User = {
     posts: {
-        fragment: 'fragment userId on User { id }',
+        fragment: "fragment userId on User { id }",
         resolve(parent, args, { prisma }, info) {
             return prisma.query.posts({
                 where: {
@@ -26,5 +27,6 @@ const User = {
         }
     }
 }
+
 
 export { User as default}
